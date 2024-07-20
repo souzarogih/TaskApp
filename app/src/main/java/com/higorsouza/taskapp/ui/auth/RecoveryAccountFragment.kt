@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.higorsouza.taskapp.R
 import com.higorsouza.taskapp.databinding.FragmentRecoveryAccountBinding
 import com.higorsouza.taskapp.util.initToolbar
+import com.higorsouza.taskapp.util.showBottomSheet
 
 class RecoveryAccountFragment : Fragment() {
 
@@ -41,7 +42,8 @@ class RecoveryAccountFragment : Fragment() {
         if(email.isNotEmpty()){
             Toast.makeText(requireContext(), "Tudo certo.", Toast.LENGTH_SHORT).show()
         }else{
-            Toast.makeText(requireContext(), "Preencha seu email.", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = R.string.email_empty)
+//            Toast.makeText(requireContext(), "Preencha seu email.", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.higorsouza.taskapp.R
 import com.higorsouza.taskapp.databinding.FragmentLoginBinding
 import com.higorsouza.taskapp.databinding.FragmentSplashBinding
+import com.higorsouza.taskapp.util.showBottomSheet
 
 class LoginFragment : Fragment() {
 
@@ -52,10 +53,12 @@ class LoginFragment : Fragment() {
             if(password.isNotEmpty()){
                 findNavController().navigate(R.id.action_global_homeFragment)
             }else{
-                Toast.makeText(requireContext(), "Preencha sua senha.", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), "Preencha sua senha.", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = R.string.password_empty)
             }
         }else{
-            Toast.makeText(requireContext(), "Preencha seu email.", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = R.string.email_empty)
+//            Toast.makeText(requireContext(), "Preencha seu email.", Toast.LENGTH_SHORT).show()
         }
     }
 
