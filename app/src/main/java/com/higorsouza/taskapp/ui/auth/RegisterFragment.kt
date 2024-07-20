@@ -48,11 +48,11 @@ class RegisterFragment : Fragment() {
             if(password.isNotEmpty()){
                 Toast.makeText(requireContext(), "Tudo certo", Toast.LENGTH_SHORT).show()
             }else{
-                showBottomSheet(message = R.string.password_empty_register_fragment)
+                showBottomSheet(message = getString(R.string.password_empty_register_fragment))
 //                Toast.makeText(requireContext(), "Preencha uma senha.", Toast.LENGTH_SHORT).show()
             }
         }else{
-            showBottomSheet(message = R.string.email_empty_register_fragment)
+            showBottomSheet(message = getString(R.string.email_empty_register_fragment))
 //            Toast.makeText(requireContext(), "Preencha um email válido.", Toast.LENGTH_SHORT).show()
         }
     }
