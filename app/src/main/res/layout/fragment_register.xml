@@ -26,7 +26,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Criar conta"
+                    android:text="@string/text_title_toolbar_register_fragment"
                     android:textColor="@color/white"
                     android:layout_gravity="center_horizontal"/>
 
@@ -54,23 +54,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Email"
+                android:text="@string/email_text"
                 android:textColor="@color/white" />
 
             <EditText
                 android:id="@+id/edtEmail"
+                style="@style/EditTextTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                style="@style/EditTextTheme"
-                android:hint="Digite seu email"
+                android:hint="@string/hint_edit_email"
                 android:inputType="textEmailAddress" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Senha"
+                android:text="@string/password_text"
                 android:textColor="@color/white" />
 
             <EditText
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/EditTextTheme"
-                android:hint="Digite sua senha"
+                android:hint="@string/hint_edit_password"
                 android:inputType="textPassword" />
 
             <com.google.android.material.button.MaterialButton
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 style="@style/ButtonTheme"
-                android:text="Criar conta" />
+                android:text="@string/text_button_register_fragment" />
 
 
             <ProgressBar
